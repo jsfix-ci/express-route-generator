@@ -14,6 +14,9 @@ const program = new Command(name);
 program.description(description);
 program.version(version, '-v, --version');
 
+/* TODO: JSFIX could not patch the breaking change:
+[Deprecated] second parameter of cmd.description(desc, argDescriptions) for adding argument descriptions  
+Suggested fix: Passing a second argument to description is deprecated after 8.0.0. We suggest using the argument API (for example, new ...description('adds a new route').argument(name, description)), which is meant for declaring program arguments instead. */
 program
   .command('add <name>')
   .alias('a')
@@ -41,6 +44,9 @@ program
     }
   });
 
+/* TODO: JSFIX could not patch the breaking change:
+[Deprecated] second parameter of cmd.description(desc, argDescriptions) for adding argument descriptions  
+Suggested fix: Passing a second argument to description is deprecated after 8.0.0. We suggest using the argument API (for example, new ...description('removes a route by name').argument(name, description)), which is meant for declaring program arguments instead. */
 program
   .command('remove <name>')
   .alias('rm')
